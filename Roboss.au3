@@ -20,7 +20,7 @@ $QuietDelay = 200
 $last_pre_saying = 18 ; This will never be the first saying. 
 Local $bFileInstall = True
 ; This will install the file C:\Test.bmp to the script location.
-If $bFileInstall Then FileInstall("C:\Users\Luc1d\code\Roboss\Roboss.jpg", "C:\ProgramData\Roboss.jpg")
+If $bFileInstall Then FileInstall( "C:\Users\Luc1d\code\Roboss\Roboss.jpg", "C:\ProgramData\Roboss.jpg")
 
 ; Declare the Wisdom.
 Global $arr[57] 
