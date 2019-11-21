@@ -1,4 +1,4 @@
 # Roboss
 Roblox Automation Application
 
-![fipanel](RobossDemo.png)
+![RobossDemoLoading](RobossDemo.gif)
