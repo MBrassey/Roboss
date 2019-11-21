@@ -3,7 +3,7 @@
 #include <WindowsConstants.au3>
 #include <GuiButton.au3>
  
-; Declare the flags.
+; Declare the flags and variables.
 $Interrupt = 0
 $EventCheck = 0
 $WinTitle = "Roblox"
@@ -18,6 +18,9 @@ $Cycles = 0
 $quiet = 0
 $QuietDelay = 200
 $last_pre_saying = 18 ; This will never be the first saying. 
+Local $bFileInstall = True
+; This will install the file C:\Test.bmp to the script location.
+If $bFileInstall Then FileInstall("C:\Users\Luc1d\code\Roboss\Roboss.jpg", "C:\ProgramData\Roboss.jpg")
 
 ; Declare the Wisdom.
 Global $arr[57] 
@@ -98,7 +101,7 @@ GUICtrlSetState($StopBtn, $GUI_HIDE)
 GUISetState()
 GUIRegisterMsg($WM_COMMAND, "_WM_COMMAND") 
 GUISetBkColor (0x000000, $hGUI )
-GUICtrlCreatePic('Roboss.jpg', 108, 2, 93, 124)
+GUICtrlCreatePic('C:\ProgramData\Roboss.jpg', 108, 2, 93, 124)
 GUISetState(@SW_SHOW)
  
 While 1
