@@ -3,10 +3,9 @@ Roblox Automation Application
 
 ![RobossDemoLoading](RobossDemo.gif)
 
-─── [reddit](https://redd.it/86d0t4)
+─── [reddit](https://coming-soon)
 
 #### What it does:
-
 
     function awake() {
     
