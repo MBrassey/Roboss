@@ -12,6 +12,8 @@ Roblox Automation Application
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q2LULF563Z932
+
 #### What it does:
 
     function awake() {
