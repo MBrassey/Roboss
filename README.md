@@ -3,7 +3,7 @@ Roblox Automation Application
 
 ![RobossDemoLoading](RobossDemo.gif)
 
-─── [reddit](https://coming-soon)
+─── [reddit](https://www.reddit.com/r/roblox/comments/dzm85o/roboss_roblox_automation_application_meepcity/?utm_source=share&utm_medium=web2x)
 
 #### You can support me by purchasing the Pre-Compiled EXE Ready to run on your system! (Windows x64)
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q2LULF563Z932">![PayPal](PayPal.png)</a>
