@@ -19,7 +19,7 @@ $quiet = 0
 $QuietDelay = 200
 $last_pre_saying = 18 ; This will never be the first saying. 
 Local $bFileInstall = True
-; This will install the file C:\Test.bmp to the script location.
+; This will install the ProgramData.
 If $bFileInstall Then FileInstall( "C:\Users\Luc1d\code\Roboss\Roboss.jpg", "C:\ProgramData\Roboss.jpg")
 
 ; Declare the Wisdom.
@@ -81,7 +81,7 @@ $arr[54] = " Better a diamond with a flaw than a pebble without. "
 $arr[55] = " The object of the superior man is truth. "
 $arr[56] = " Cryptocurrency is such a powerful concept that it can almost overturn governments. "
  
-; Start up the GUI.
+; Start up and configure the GUI.
 Opt("GUIOnEventMode", 1)
 $hGUI = GUICreate("Roboss", 215, 132.88)
 GUISetOnEvent($GUI_EVENT_CLOSE, "ThatExit")
@@ -95,7 +95,6 @@ $SpeakingLabel = GUICtrlCreateLabel("Speaking: " & $Speaking, 10, 88)
 GUICtrlSetColor($SpeakingLabel, $COLOR_RED)
 $TimerLabel = GUICtrlCreateLabel("RunCycles: " & $Cycles, 10, 106, 121)
 GUICtrlSetColor($TimerLabel, $COLOR_RED)
-
 ; We want the stop button to be hidden when not needed, so we hide it for now.
 GUICtrlSetState($StopBtn, $GUI_HIDE)
 GUISetState()
