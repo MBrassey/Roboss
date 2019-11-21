@@ -45,7 +45,7 @@ No. Roboss uses methods to produce organic like activity simulating a real human
 Roboss is 100% Open Source and FREE to use and distribute. There's also an option to purchase the pre-compiled EXE for easy use.   
 
 
-#### Why did you make Roboss?
+#### Why did I make Roboss?
 I made Roboss for fun, specifically for use in MeepCity.  
 
 
