@@ -6,7 +6,7 @@ Roblox Automation Application
 ─── [reddit](https://www.reddit.com/r/robloxgamedev/comments/dzsm7r/roboss_stay_awake_speak_wisely_in_roblox_meepcity/?utm_source=share&utm_medium=web2x)
 
 #### You can support me by purchasing the Pre-Compiled EXE, Ready to run on your system! [$5] (Windows x64)
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q2LULF563Z932">![PayPal](PayPal.png)</a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RKFSELTDLU2Y2">![PayPal](PayPal.png)</a>
 <a href="https://gocps.net/8docnq7cj7g3alcj6rwfzqvng/">![CoinPayments](Coin.png)</a>
 #### What it does:
 
