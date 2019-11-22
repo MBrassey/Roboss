@@ -7,7 +7,7 @@ Roblox Automation Application
 
 #### You can support me by purchasing the Pre-Compiled EXE, Ready to run on your system! [$5] (Windows x64)
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q2LULF563Z932">![PayPal](PayPal.png)</a>
-<a href="https://gocps.net/8docnq7cj7g3alcj6rwfzqvng/">![CoinPayments](Coin.png)</a>
+<a href="https://www.coinpayments.net/index.php?cmd=_pay&reset=1&merchant=6004d3bd79c155273de09821add416fe&item_name=Roboss+item&currency=USD&amountf=5.00000000&quantity=1&allow_quantity=0&want_shipping=0&allow_extra=0&success_url=https://roboss.sfo2.digitaloceanspaces.com/ThankYou.htm&cancel_url=https://github.com/luc1dLife/Roboss&>![CoinPayments](Coin.png)</a>
 #### What it does:
 
     function awake() {
