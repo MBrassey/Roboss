@@ -3,7 +3,7 @@ Roblox Automation Application
 
 ![RobossDemoLoading](RobossDemo.gif)
 
-─── [reddit](https://www.reddit.com/r/roblox/comments/dznlsa/roboss_stay_awake_speak_wisdom_in_roblox/?utm_source=share&utm_medium=web2x)
+─── [reddit](https://www.reddit.com/r/robloxgamedev/comments/dzsm7r/roboss_stay_awake_speak_wisely_in_roblox_meepcity/?utm_source=share&utm_medium=web2x)
 
 #### You can support me by purchasing the Pre-Compiled EXE, Ready to run on your system! [$5] (Windows x64)
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q2LULF563Z932">![PayPal](PayPal.png)</a>
