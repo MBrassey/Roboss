@@ -58,7 +58,7 @@ In MeepCity, Roboss earns you $3,000 Robux worth of MeepCoin, this is $35 value 
 #### Troubleshooting:
 Roboss will close itself if a Roblox window is not open.
 Roboss will continually activate the Roblox window, so you will not be able to have a window on top of Roblox.
-You can use a second monitor with Roboss and Roblox open so you can continue using your computer normally on the other. 
+You can use a second monitor with Roboss and Roblox open so you can continue using your computer normally on the other. When using the "Speak Wisely" function, if you click on another window at the same time as Roboss is trying to type the message in to Roblox, the text will instead be printed on the window you clicked on. 
 
 
 #### ToDo:
