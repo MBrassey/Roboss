@@ -9,14 +9,20 @@ $EventCheck = 0
 $WinTitle = "Roblox"
 $WinText = ""
 $Wisdom = 0
+$Dance = 0
+$dancewait = 0
+$edance = "e dance"
 $SpeakSlowly = 0
 $AwakeSlowly = 0
 $Speaking = "No"
+$Dancing = "No"
+$DancingLabel = ""
 $SpeakingLabel = ""
 $TimerLabel = ""
 $Cycles = 0
 $quiet = 0
 $QuietDelay = 200
+$DanceDelay = 200
 $last_pre_saying = 18 ; This will never be the first saying. 
 Local $bFileInstall = True
 ; This will install the ProgramData.
@@ -83,24 +89,28 @@ $arr[56] = " Cryptocurrency is such a powerful concept that it can almost overtu
  
 ; Start up and configure the GUI.
 Opt("GUIOnEventMode", 1)
-$hGUI = GUICreate("Roboss", 215, 132.88)
+$hGUI = GUICreate("Roboss", 205, 165)
 GUISetOnEvent($GUI_EVENT_CLOSE, "ThatExit")
-$RunBtn = GUICtrlCreateButton("Stay Awake!", 10, 10, 80, 30)
+$RunBtn = GUICtrlCreateButton("Stay Awake!", 100, 10, 80, 30)
 GUICtrlSetOnEvent($RunBtn, "RunnerFunc")
-$StopBtn = GUICtrlCreateButton("Stop", 10, 10, 80, 30)
+$StopBtn = GUICtrlCreateButton("Stop", 100, 10, 80, 30)
 GUICtrlSetOnEvent($StopBtn, "StopFunc")
-$WiseBtn = GUICtrlCreateButton("SpeakWisdom", 10, 50, 80, 30)
+$WiseBtn = GUICtrlCreateButton("SpeakWisdom", 10, 10, 80, 30)
 GUICtrlSetOnEvent($WiseBtn, "WiseFunc")
-$SpeakingLabel = GUICtrlCreateLabel("Speaking: " & $Speaking, 10, 88)
+$DanceBtn = GUICtrlCreateButton("Dance", 10, 50, 80, 30)
+GUICtrlSetOnEvent($DanceBtn, "DanceFunc")
+$SpeakingLabel = GUICtrlCreateLabel("Speaking: " & $Speaking, 10, 100)
 GUICtrlSetColor($SpeakingLabel, $COLOR_RED)
-$TimerLabel = GUICtrlCreateLabel("RunCycles: " & $Cycles, 10, 106, 121)
+$DancingLabel = GUICtrlCreateLabel("Dancing: " & $Dancing, 10, 120)
+GUICtrlSetColor($DancingLabel, $COLOR_RED)
+$TimerLabel = GUICtrlCreateLabel("RunCycles: " & $Cycles, 10, 140, 108)
 GUICtrlSetColor($TimerLabel, $COLOR_RED)
 ; We want the stop button to be hidden when not needed, so we hide it for now.
 GUICtrlSetState($StopBtn, $GUI_HIDE)
 GUISetState()
 GUIRegisterMsg($WM_COMMAND, "_WM_COMMAND") 
 GUISetBkColor (0x000000, $hGUI )
-GUICtrlCreatePic('C:\ProgramData\Roboss.jpg', 108, 2, 93, 124)
+GUICtrlCreatePic('C:\ProgramData\Roboss.jpg', 98, 40, 93, 124)
 GUISetState(@SW_SHOW)
  
 While 1
@@ -124,6 +134,9 @@ Func RunnerFunc()
   $EventCheck = 0
   For $i = 0 To 1
     awake()
+    if $Dance = 1 Then
+    dance()
+    EndIf
     if $Wisdom = 1 Then
     sayings()
     if $quiet >= $QuietDelay then QuietFunc()
@@ -176,11 +189,29 @@ func sayings()
     EndIf
 EndFunc
 
+func dance()
+          $dancewait = $dancewait + 1
+          If $dancewait = 1 or $dancewait >= Random(60,80) Then 
+             If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
+               WinWaitActive($WinTitle,"",2)
+               send("/" & "/e dance")
+               send("{ENTER}")
+               $dancewait = 1
+             EndIf
+EndFunc
+
 Func WiseFunc()
   $Wisdom = 1
   $Speaking = "Yes"
   GuiCtrlSetState ($WiseBtn, $GUI_DISABLE)
   GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
+EndFunc
+
+Func DanceFunc()
+  $Dance = 1
+  $Dancing = "Yes"
+  GuiCtrlSetState ($DanceBtn, $GUI_DISABLE)
+  GUICtrlSetData ($DancingLabel, "Dancing: " & $Dancing)
 EndFunc
 
 Func QuietFunc()
@@ -197,14 +228,22 @@ Func StopFunc()
   GUICtrlSetState($StopBtn, $GUI_HIDE)
   GUICtrlSetState($RunBtn, $GUI_SHOW)
   GuiCtrlSetState ($WiseBtn, $GUI_ENABLE)
+  GuiCtrlSetState ($DanceBtn, $GUI_ENABLE)
+  WinActivate($WinTitle,"")
+    WinWaitActive($WinTitle,"",2)
+    send("{UP}")
   $Wisdom = 0
+  $Dance = 0
   $SpeakSlowly = 0
   $SpeakSlowly = 0
   $AwakeSlowly = 0
   $Speaking = "No"
+  $Dancing = "No"
   $Cycles = -1
   $saying = ""
+  $dancewait = 0
   GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
+  GUICtrlSetData ($DancingLabel, "Dancing: " & $Dancing)
   sleep(1000)
 EndFunc
 
