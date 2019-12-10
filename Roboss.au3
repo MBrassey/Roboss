@@ -11,7 +11,6 @@ $WinText = ""
 $Wisdom = 0
 $Dance = 0
 $dancewait = 0
-$edance = "e dance"
 $SpeakSlowly = 0
 $AwakeSlowly = 0
 $Speaking = "No"
@@ -23,6 +22,7 @@ $Cycles = 0
 $quiet = 0
 $QuietDelay = 200
 $DanceDelay = 200
+Opt("SendKeyDelay", 10) 
 $last_pre_saying = 18 ; This will never be the first saying. 
 Local $bFileInstall = True
 ; This will install the ProgramData.
@@ -194,7 +194,7 @@ func dance()
           If $dancewait = 1 or $dancewait >= Random(30,50) Then 
              If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
                WinWaitActive($WinTitle,"",2)
-               send("/" & "/e dance")
+               send("/" & "/" & "e dance")
                send("{ENTER}")
                $dancewait = 1
              EndIf
@@ -224,14 +224,18 @@ Func QuietFunc()
   GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
 EndFunc
 
+Func StopDance()
+  sleep(1000)
+  WinActivate($WinTitle,"")
+  WinWaitActive($WinTitle,"",2)
+  send("{UP}")
+  EndFunc
+
 Func StopFunc()
   GUICtrlSetState($StopBtn, $GUI_HIDE)
   GUICtrlSetState($RunBtn, $GUI_SHOW)
   GuiCtrlSetState ($WiseBtn, $GUI_ENABLE)
   GuiCtrlSetState ($DanceBtn, $GUI_ENABLE)
-  WinActivate($WinTitle,"")
-    WinWaitActive($WinTitle,"",2)
-    send("{UP}")
   $Wisdom = 0
   $Dance = 0
   $SpeakSlowly = 0
@@ -244,6 +248,10 @@ Func StopFunc()
   $dancewait = 0
   GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
   GUICtrlSetData ($DancingLabel, "Dancing: " & $Dancing)
+  WinActivate($WinTitle,"")
+  WinWaitActive($WinTitle,"",2)
+  send("{UP}")
+  StopDance()
   sleep(1000)
 EndFunc
 
