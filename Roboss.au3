@@ -191,7 +191,7 @@ EndFunc
 
 func dance()
           $dancewait = $dancewait + 1
-          If $dancewait = 1 or $dancewait >= Random(60,80) Then 
+          If $dancewait = 1 or $dancewait >= Random(30,50) Then 
              If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
                WinWaitActive($WinTitle,"",2)
                send("/" & "/e dance")
