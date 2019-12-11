@@ -51,7 +51,7 @@ No. Roboss uses methods to produce organic like activity simulating a real human
 
 
 #### Is Roboss Free?
-Roboss is 100% Open Source and FREE to use and distribute. There's also an option to purchase the pre-compiled EXE for easy use.   
+Roboss is 100% Free & Open Source. If you find Roboss useful please clicking the donate button above ^__^.   
 
 
 #### Why did I make Roboss?
