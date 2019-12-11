@@ -10,7 +10,7 @@ $WinTitle = "Roblox"
 $WinText = ""
 $Wisdom = 0
 $Dance = 0
-$dancewait = 0
+$DanceSlowly = 0
 $SpeakSlowly = 0
 $AwakeSlowly = 0
 $Speaking = "No"
@@ -20,9 +20,7 @@ $SpeakingLabel = ""
 $TimerLabel = ""
 $Cycles = 0
 $quiet = 0
-$QuietDelay = 200
-$DanceDelay = 200
-Opt("SendKeyDelay", 10) 
+Opt("SendKeyDelay", 100) 
 $last_pre_saying = 18 ; This will never be the first saying. 
 Local $bFileInstall = True
 ; This will install the ProgramData.
@@ -91,7 +89,7 @@ $arr[56] = " Cryptocurrency is such a powerful concept that it can almost overtu
 Opt("GUIOnEventMode", 1)
 $hGUI = GUICreate("Roboss", 205, 165)
 GUISetOnEvent($GUI_EVENT_CLOSE, "ThatExit")
-$RunBtn = GUICtrlCreateButton("Stay Awake!", 100, 10, 80, 30)
+$RunBtn = GUICtrlCreateButton("Start!", 100, 10, 80, 30)
 GUICtrlSetOnEvent($RunBtn, "RunnerFunc")
 $StopBtn = GUICtrlCreateButton("Stop", 100, 10, 80, 30)
 GUICtrlSetOnEvent($StopBtn, "StopFunc")
@@ -139,7 +137,7 @@ Func RunnerFunc()
     EndIf
     if $Wisdom = 1 Then
     sayings()
-    if $quiet >= $QuietDelay then QuietFunc()
+    if $quiet >= Random(195,205) then QuietFunc()
     EndIf
     $Cycles = $Cycles + 1
     GUICtrlSetData ($TimerLabel, "RunCycles: " & $Cycles)
@@ -190,14 +188,16 @@ func sayings()
 EndFunc
 
 func dance()
-          $dancewait = $dancewait + 1
-          If $dancewait = 1 or $dancewait >= Random(30,50) Then 
+  If $DanceSlowly = 0 Then
              If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
                WinWaitActive($WinTitle,"",2)
                Send("{BREAK}")
                send("/" & "/" & "e dance")
                send("{ENTER}")
-               $dancewait = 1
+             EndIf
+             $DanceSlowly = $DanceSlowly + 1
+             If $DanceSlowly >= Random(50,70) Then
+               $DanceSlowly = 0
              EndIf
 EndFunc
 
@@ -226,34 +226,35 @@ Func QuietFunc()
 EndFunc
 
 Func StopDance()
-  sleep(1000)
+  If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
   WinActivate($WinTitle,"")
   WinWaitActive($WinTitle,"",2)
   send("{UP}")
+  send("{DOWN}")
+  send("{UP}")
+  send("{DOWN}")
+  $Dance = 0
+  $DanceSlowly = 0
   EndFunc
 
 Func StopFunc()
+  StopDance()
   GUICtrlSetState($StopBtn, $GUI_HIDE)
   GUICtrlSetState($RunBtn, $GUI_SHOW)
   GuiCtrlSetState ($WiseBtn, $GUI_ENABLE)
   GuiCtrlSetState ($DanceBtn, $GUI_ENABLE)
   $Wisdom = 0
-  $Dance = 0
-  $SpeakSlowly = 0
   $SpeakSlowly = 0
   $AwakeSlowly = 0
   $Speaking = "No"
   $Dancing = "No"
   $Cycles = -1
   $saying = ""
-  $dancewait = 0
   GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
   GUICtrlSetData ($DancingLabel, "Dancing: " & $Dancing)
-  WinActivate($WinTitle,"")
-  WinWaitActive($WinTitle,"",2)
-  send("{UP}")
   StopDance()
   sleep(1000)
+  StopDance()
 EndFunc
 
 Func _WM_COMMAND($hWnd, $Msg, $wParam, $lParam)
