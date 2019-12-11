@@ -3,8 +3,6 @@ Roblox Automation Application
 
 ![RobossDemoLoading](RobossDemo.gif)
 
-─── [reddit](https://www.reddit.com/r/robloxgamedev/comments/dzsm7r/roboss_stay_awake_speak_wisely_in_roblox_meepcity/?utm_source=share&utm_medium=web2x)
-
 #### The Pre-Compiled EXE (Windows x64) is now provided for FREE. If you find Roboss helpful, please donate bellow ^__^. 
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RKFSELTDLU2Y2">![PayPal](PayPal.png)</a>
