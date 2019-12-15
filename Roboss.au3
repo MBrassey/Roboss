@@ -13,7 +13,7 @@ $Dance = 0
 $DanceSlowly = 0
 $SpeakSlowly = 0
 $AwakeSlowly = 0
-$RecordStop = 0
+$RecordStop = 1
 $Speaking = "No"
 $Dancing = "No"
 $Recording = "No"
@@ -217,13 +217,11 @@ func dance()
 EndFunc
 
 func record()
-  If $RecordStop = 0 Then
     If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
       WinActivate($WinTitle,"")
       WinWaitActive($WinTitle,"",2)
       send("{F12}")
-    EndIf
-      $RecordStop = $RecordStop + 1
+      $RecordStop = 3
 EndFunc
 
 Func WiseFunc()
@@ -248,7 +246,7 @@ EndFunc
 
 Func RecordFunc()
   GuiCtrlSetState ($RecordBtn, $GUI_DISABLE)
-  GUICtrlSetData ($RecordingLabel, "Recording: " & $Recording)
+  $RecordStop = 0
 EndFunc
 
 Func StopDance()
@@ -270,22 +268,24 @@ Func StopFunc()
   GuiCtrlSetState ($WiseBtn, $GUI_ENABLE)
   GuiCtrlSetState ($DanceBtn, $GUI_ENABLE)
   GuiCtrlSetState ($RecordBtn, $GUI_ENABLE)
-  If $RecordStop = 1 Then
+  If $RecordStop = 3 Then
     If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
       WinActivate($WinTitle,"")
       WinWaitActive($WinTitle,"",2)
       send("{F12}")
     EndIf
-  $RecordStop = 0
+  $RecordStop = 1
   $Wisdom = 0
   $SpeakSlowly = 0
   $AwakeSlowly = 0
   $Speaking = "No"
   $Dancing = "No"
+  $Recording = "No"
   $Cycles = -1
   $saying = ""
   GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
   GUICtrlSetData ($DancingLabel, "Dancing: " & $Dancing)
+  GUICtrlSetData ($RecordingLabel, "Recording: " & $Recording)
   StopDance()
   sleep(1000)
   StopDance()
