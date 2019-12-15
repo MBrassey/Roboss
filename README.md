@@ -42,6 +42,8 @@ Roblox Automation Application
 #### What Roblox games does it work on?
 Roboss works on all Roblox games. It works especially well for games that require your active participation to stay awake.  
 
+#### How to use it?
+Click any options you desire on the left, then click "Start" on the right to activate Roboss. When you would like to stop, click "Stop" on the right. You can add optons anytime even if Roboss is already running, however, you cannot stop individual options without clicking "Stop" and stopping all the options first. 
 
 #### How long will my character stay awake?
 Roboss will keep your character awake as long as possible. Roboss also prevents network disconnection due to inactivity. If the Roblox server is updated or you have a physical or ISP related network disconnection, Roboss will stop working.  
