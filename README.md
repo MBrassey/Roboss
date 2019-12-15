@@ -32,6 +32,13 @@ Roblox Automation Application
     
     }
 
+    function record() {
+    
+    ... Starts recording the active Roblox window ...
+    ... Stops recording the active Roblox window, Roblox saves the video to default location ...
+    
+    }
+
 #### What Roblox games does it work on?
 Roboss works on all Roblox games. It works especially well for games that require your active participation to stay awake.  
 
