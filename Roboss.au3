@@ -13,8 +13,10 @@ $Dance = 0
 $DanceSlowly = 0
 $SpeakSlowly = 0
 $AwakeSlowly = 0
+$RecordStop = 0
 $Speaking = "No"
 $Dancing = "No"
+$Recording = "No"
 $DancingLabel = ""
 $SpeakingLabel = ""
 $TimerLabel = ""
@@ -87,7 +89,7 @@ $arr[56] = " Cryptocurrency is such a powerful concept that it can almost overtu
  
 ; Start up and configure the GUI.
 Opt("GUIOnEventMode", 1)
-$hGUI = GUICreate("Roboss", 205, 165)
+$hGUI = GUICreate("Roboss", 195, 187)
 GUISetOnEvent($GUI_EVENT_CLOSE, "ThatExit")
 $RunBtn = GUICtrlCreateButton("Start!", 100, 10, 80, 30)
 GUICtrlSetOnEvent($RunBtn, "RunnerFunc")
@@ -97,18 +99,22 @@ $WiseBtn = GUICtrlCreateButton("SpeakWisdom", 10, 10, 80, 30)
 GUICtrlSetOnEvent($WiseBtn, "WiseFunc")
 $DanceBtn = GUICtrlCreateButton("Dance", 10, 50, 80, 30)
 GUICtrlSetOnEvent($DanceBtn, "DanceFunc")
-$SpeakingLabel = GUICtrlCreateLabel("Speaking: " & $Speaking, 10, 100)
+$RecordBtn = GUICtrlCreateButton("Record", 10, 90, 80, 30)
+GUICtrlSetOnEvent($RecordBtn, "RecordFunc")
+$SpeakingLabel = GUICtrlCreateLabel("Speaking: " & $Speaking, 10, 130)
 GUICtrlSetColor($SpeakingLabel, $COLOR_RED)
-$DancingLabel = GUICtrlCreateLabel("Dancing: " & $Dancing, 10, 120)
+$DancingLabel = GUICtrlCreateLabel("Dancing: " & $Dancing, 10, 147)
 GUICtrlSetColor($DancingLabel, $COLOR_RED)
-$TimerLabel = GUICtrlCreateLabel("RunCycles: " & $Cycles, 10, 140, 108)
+$TimerLabel = GUICtrlCreateLabel("RunCycles: " & $Cycles, 10, 164, 108)
 GUICtrlSetColor($TimerLabel, $COLOR_RED)
+$RecordingLabel = GUICtrlCreateLabel("Recording: " & $Recording, 100, 50)
+GUICtrlSetColor($RecordingLabel, $COLOR_RED)
 ; We want the stop button to be hidden when not needed, so we hide it for now.
 GUICtrlSetState($StopBtn, $GUI_HIDE)
 GUISetState()
 GUIRegisterMsg($WM_COMMAND, "_WM_COMMAND") 
 GUISetBkColor (0x000000, $hGUI )
-GUICtrlCreatePic('C:\ProgramData\Roboss.jpg', 98, 40, 93, 124)
+GUICtrlCreatePic('C:\ProgramData\Roboss.jpg', 98, 63, 93, 124)
 GUISetState(@SW_SHOW)
  
 While 1
@@ -131,11 +137,20 @@ Func RunnerFunc()
   $Interrupt = 0
   $EventCheck = 0
   For $i = 0 To 1
+    if $RecordStop = 0 Then
+      $Recording = "Yes"
+      GUICtrlSetData ($RecordingLabel, "Recording: " & $Recording)
+      record()
+      EndIf
     awake()
     if $Dance = 1 Then
+    $Dancing = "Yes"
+    GUICtrlSetData ($DancingLabel, "Dancing: " & $Dancing)
     dance()
     EndIf
     if $Wisdom = 1 Then
+      $Speaking = "Yes"
+      GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
     sayings()
     if $quiet >= Random(195,205) then QuietFunc()
     EndIf
@@ -201,18 +216,24 @@ func dance()
              EndIf
 EndFunc
 
+func record()
+  If $RecordStop = 0 Then
+    If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
+      WinActivate($WinTitle,"")
+      WinWaitActive($WinTitle,"",2)
+      send("{F12}")
+    EndIf
+      $RecordStop = $RecordStop + 1
+EndFunc
+
 Func WiseFunc()
   $Wisdom = 1
-  $Speaking = "Yes"
   GuiCtrlSetState ($WiseBtn, $GUI_DISABLE)
-  GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
 EndFunc
 
 Func DanceFunc()
   $Dance = 1
-  $Dancing = "Yes"
   GuiCtrlSetState ($DanceBtn, $GUI_DISABLE)
-  GUICtrlSetData ($DancingLabel, "Dancing: " & $Dancing)
 EndFunc
 
 Func QuietFunc()
@@ -223,6 +244,11 @@ Func QuietFunc()
   $quiet = 0
   GuiCtrlSetState ($WiseBtn, $GUI_ENABLE)
   GUICtrlSetData ($SpeakingLabel, "Speaking: " & $Speaking)
+EndFunc
+
+Func RecordFunc()
+  GuiCtrlSetState ($RecordBtn, $GUI_DISABLE)
+  GUICtrlSetData ($RecordingLabel, "Recording: " & $Recording)
 EndFunc
 
 Func StopDance()
@@ -243,6 +269,14 @@ Func StopFunc()
   GUICtrlSetState($RunBtn, $GUI_SHOW)
   GuiCtrlSetState ($WiseBtn, $GUI_ENABLE)
   GuiCtrlSetState ($DanceBtn, $GUI_ENABLE)
+  GuiCtrlSetState ($RecordBtn, $GUI_ENABLE)
+  If $RecordStop = 1 Then
+    If Not WinActive($WinTitle,"") Then WinActivate($WinTitle,"")
+      WinActivate($WinTitle,"")
+      WinWaitActive($WinTitle,"",2)
+      send("{F12}")
+    EndIf
+  $RecordStop = 0
   $Wisdom = 0
   $SpeakSlowly = 0
   $AwakeSlowly = 0
