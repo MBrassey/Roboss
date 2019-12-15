@@ -76,5 +76,4 @@ You can use a second monitor with Roboss and Roblox open so you can continue usi
 
 
 #### ToDo:
-- [ ] Improve event handling and efficiency. 
-- [ ] Add more functions such has automatic movements.  
+- [ ] Its done BRUH.  
