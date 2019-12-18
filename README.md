@@ -68,7 +68,7 @@ I made Roboss for fun, specifically for use in MeepCity.
 #### How many Robux can you save by using Roboss?
 In MeepCity, Roboss earns you $3,000 Robux worth of MeepCoin, this is $35 value per day!  
 
-#### Windows Defender / AntiVirus
+#### Windows Defender / AntiVirus:
 The single reason Windows Defender prompts you when you run Roboss for the first time is that it's not a verified Microsoft application. Simply click "more info" and then "Run Anyways" to use Roboss. All AntiVirus software I've tested (Avast, Norton & ESET) scan Roboss and it comes back clean. If you like, you can compile Roboss yourself using this repository and the AutoIT compilation tool.
 
 #### Troubleshooting:
