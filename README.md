@@ -76,5 +76,8 @@ If you are already dancing, you have to select the dance option to continue stay
 Roboss will continually activate the Roblox window, so you will not be able to have a window on top of Roblox.
 You can use a second monitor with Roboss and Roblox open so you can continue using your computer normally on the other. When using the "Speak Wisely" function, if you click on another window at the same time as Roboss is trying to type the message in to Roblox, the text will instead be printed on the window you clicked. 
 
+#### Disclaimer:
+Roboss is a Hobby Proof of Concept project. It was created just for fun and was partially designed by a six year old. I am in no way selling or advertising this application to replace purchasing Robux. I'm distributing it for free, as an experimental open source application.
+
 #### ToDo:
 - [ ] Its done BRUH.  
