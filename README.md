@@ -50,7 +50,7 @@ Roboss will keep your character awake as long as possible. Roboss also prevents 
 
 
 #### How much MeepCity Coin can I earn with Roboss?
-Based on recent testing, Roboss deliveres around 20,000 Meep Coin per day to PLUS Members.  
+Based on recent testing, Roboss deliveres around 20,000 Meep Coin per day to PLUS Members. You can see in the animation above, I've earned over a Million Meep Coin. This is worth 160,000 Robux, or $1,882. 
 
 
 #### Will my account get banned?
@@ -66,7 +66,7 @@ I made Roboss for fun, specifically for use in MeepCity.
 
 
 #### How many Robux can you save by using Roboss?
-In MeepCity, Roboss earns you $3,000 Robux worth of MeepCoin, this is $35 value per day!  
+In MeepCity, Roboss earns you $3,000 Robux worth of MeepCoin, this is $35 value per day! I've earned over a Million Meep Coin using Roboss. This is worth 160,000 Robux, or $1,882. It took aprox 53 days.
 
 #### Windows Defender / AntiVirus:
 The single reason Windows Defender prompts you when you run Roboss for the first time is that it's not a verified Microsoft application. Simply click "more info" and then "Run Anyways" to use Roboss. All AntiVirus software I've tested (Avast, Norton & ESET) scan Roboss and it comes back clean. If you like, you can compile Roboss yourself using this repository and the AutoIT compilation tool.
