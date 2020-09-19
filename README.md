@@ -1,7 +1,8 @@
 # Roboss
-Roblox Automation Application
 
-![RobossDemoLoading](RobossDemo.gif)
+> Roblox Automation Application.
+
+[<img src="RobossDemo.gif">](https://brassey.io/)
 
 #### The Pre-Compiled EXE (Windows x64) is now provided for FREE. If you find Roboss helpful, please donate below ^__^. 
 
