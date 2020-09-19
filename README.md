@@ -83,4 +83,4 @@ You can use a second monitor with Roboss and Roblox open so you can continue usi
 Roboss is a Hobby Proof of Concept project. It was created just for fun and was partially designed by a six year old. I am in no way selling or advertising this application to replace purchasing Robux. I'm distributing it for free, as an experimental open source application.
 
 #### ToDo:
-- [ ] Its done BRUH.  
+- [x] Its done BRUH.  
