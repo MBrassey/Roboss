@@ -13,7 +13,7 @@ Roblox Automation Application.
 
 [Download Roboss](https://github.com/MBrassey/Roboss/releases)
 
-#### What it does:
+#### What it does
 
     function awake() {
     
@@ -73,15 +73,15 @@ I made Roboss for fun, specifically for use in MeepCity.
 #### How many Robux can you save by using Roboss?
 In MeepCity, Roboss earns you $3,000 Robux worth of MeepCoin, this is $35 value per day! I've earned over a Million Meep Coin using Roboss. This is worth 160,000 Robux, or $1,882. It took aprox 53 days.
 
-#### Windows Defender / AntiVirus:
+#### Windows Defender / AntiVirus
 The single reason Windows Defender prompts you when you run Roboss for the first time is that it's not a verified Microsoft application. Simply click "more info" and then "Run Anyways" to use Roboss. All AntiVirus software I've tested (Avast, Norton & ESET) scan Roboss and it comes back clean. If you like, you can compile Roboss yourself using this repository and the AutoIT compilation tool.
 
-#### Troubleshooting:
+#### Troubleshooting
 If you are already dancing, you have to select the dance option to continue staying awake (in some minigames).
 Roboss will continually activate the Roblox window, so you will not be able to have a window on top of Roblox.
 You can use a second monitor with Roboss and Roblox open so you can continue using your computer normally on the other. When using the "Speak Wisely" function, if you click on another window at the same time as Roboss is trying to type the message in to Roblox, the text will instead be printed on the window you clicked. 
 
-#### Disclaimer:
+#### Disclaimer
 Roboss is a Hobby Proof of Concept project. It was created just for fun and was partially designed by a six year old. I am in no way selling or advertising this application to replace purchasing Robux. I'm distributing it for free, as an experimental open source application.
 
 #### Questions
