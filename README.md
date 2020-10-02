@@ -1,15 +1,17 @@
-# Roboss
+#### Roboss
 
-> Roblox Automation Application.
+Roblox Automation Application.
+
+![licensebadge](https://img.shields.io/badge/license-CC0_1.0_Universal-blue)
 
 [<img src="RobossDemo.gif">](https://brassey.io/)
 
 #### The Pre-Compiled EXE (Windows x64) is now provided for FREE. If you find Roboss helpful, please donate below ^__^. 
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RKFSELTDLU2Y2">![PayPal](PayPal.png)</a>
-<a href="https://www.coinpayments.net/index.php?cmd=_pay&reset=1&merchant=6004d3bd79c155273de09821add416fe&item_name=Roboss+item&currency=USD&amountf=5.00000000&quantity=1&allow_quantity=0&want_shipping=0&allow_extra=0&success_url=https://roboss.sfo2.digitaloceanspaces.com/ThankYou.htm&cancel_url=https://github.com/luc1dLife/Roboss&">![CoinPayments](Coin.png)</a>
+<a href="https://www.coinpayments.net/index.php?cmd=_pay&reset=1&merchant=6004d3bd79c155273de09821add416fe&item_name=Roboss+item&currency=USD&amountf=5.00000000&quantity=1&allow_quantity=0&want_shipping=0&allow_extra=0&success_url=https://roboss.sfo2.digitaloceanspaces.com/ThankYou.htm&cancel_url=https://github.com/MBrassey/Roboss&">![CoinPayments](Coin.png)</a>
 
-[Download Roboss](https://github.com/luc1dLife/Roboss/releases)
+[Download Roboss](https://github.com/MBrassey/Roboss/releases)
 
 #### What it does:
 
@@ -82,5 +84,10 @@ You can use a second monitor with Roboss and Roblox open so you can continue usi
 #### Disclaimer:
 Roboss is a Hobby Proof of Concept project. It was created just for fun and was partially designed by a six year old. I am in no way selling or advertising this application to replace purchasing Robux. I'm distributing it for free, as an experimental open source application.
 
-#### ToDo:
-- [x] Its done BRUH.  
+#### Questions
+Contact me at [matt@brassey.io](mailto:matt@brassey.io) with any questions or comments.
+
+#### License
+`Roboss` is published under the __CC0_1.0_Universal__ license.
+
+> The Creative Commons CC0 Public Domain Dedication waives copyright interest in a work you've created and dedicates it to the world-wide public domain. Use CC0 to opt out of copyright entirely and ensure your work has the widest reach. As with the Unlicense and typical software licenses, CC0 disclaims warranties. CC0 is very similar to the Unlicense.
